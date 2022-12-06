@@ -36,7 +36,7 @@ sync
 
 echo "$data - Tentando montar o HDD externo" | tee -a "$logs"
 
-disk2=$(/bin/mount -U 51c43016-4d95-4381-988a-a4d6f8a656e1 /mnt/externo && echo "sim" || echo "nao")
+disk2=$(/bin/mount -U YOUR_UUID_HERE /mnt/externo && echo "sim" || echo "nao")
 
 [ "$disk2" = "sim" ] && {
   extpath="/mnt/externo/Oracle/"
