@@ -21,7 +21,7 @@ logs="/home/administrador/Logs_Backup"
 touch "$logs"
 
 echo "$data - Apagando backups mais antigos" | tee -a "$logs"
-#find "$folder" -type f -mtime +45 -delete
+find "$bacpath" -type f -mtime +45 -delete
 
 #find "$folder" -type d -mtime +45 -exec rm -rf {} \;
 #find "$folder" -type d -empty -delete
