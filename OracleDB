@@ -24,6 +24,7 @@ touch -m "$getpath"*
 echo "$data - Apagando backups mais antigos" | tee -a "$logs"
 find "$bacpath" -type d -mtime +45 -exec rm -rf {} \;
 find "$bacpath" -type f -mtime +45 -delete
+find "$bacpath" -type d -empty -delete
 
 echo "$data - Iniciando backups!" | tee -a "$logs"
 
