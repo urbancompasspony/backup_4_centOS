@@ -20,11 +20,10 @@ logs="/home/administrador/Logs_Backup"
 
 touch "$logs"
 
-echo "$data - Apagando backups mais antigos" | tee -a "$logs"
-find "$bacpath" -type f -mtime +45 -delete
-
-#find "$folder" -type d -mtime +45 -exec rm -rf {} \;
-#find "$folder" -type d -empty -delete
+#echo "$data - Apagando backups mais antigos" | tee -a "$logs"
+#find "$bacpath" -type d -mtime +45 -exec rm -rf {} \;
+#find "$bacpath" -type f -mtime +45 -delete
+#touch folder
 
 echo "$data - Iniciando backups!" | tee -a "$logs"
 
